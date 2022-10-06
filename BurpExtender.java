@@ -11,9 +11,9 @@ public class BurpExtender implements IBurpExtender, IHttpListener {
     private PrintWriter stdout;
 
     // Change URL(/s) in urlMatchList to match your scope. If empty, headers in headersToAdd are added to all request URL(/s). Excluding protocol also works e.g. portswigger-labs.net
-    private String[] urlMatchList = {"https://portswigger-labs.net"};
+    private String[] urlMatchList = {};
     // Adjust key:value pairs in headersToAdd as appropriate
-    private String[] headersToAdd = {"Accept-Encoding: gzip, deflateX"};
+    private String[] headersToAdd = {"X-BurpSuite: 1"};
     // Toggle checkForDuplicates between false and true if you want to remove any duplicated headers
     private boolean checkForDuplicates = false;
 
