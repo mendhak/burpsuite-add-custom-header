@@ -1,11 +1,11 @@
-# add-custom-headers
-Extensions written in Python and Java that add custom headers to every request 
+Extension for BurpSuite Enterprise which adds a hardcoded `X-BurpSuite: 1` header to every request.  Totally unconfigurable.  
 
-Working code implementation of the Python version is based on: https://stackoverflow.com/questions/31684024/burp-extension-add-header-to-response/37736825#37736825
+The intention is to use this extension and then filter out BurpSuite traffic in our logging and monitoring stack.  
 
-Working code implementation of the Java version is based on: https://forum.portswigger.net/thread/unable-to-edit-the-content-headers-e5ce4a72
+Forked from [this extension](https://github.com/UthmanPortSwigger/add-custom-headers).  
 
-**The Java version is compatible with both Burp Suite Professional and Burp Suite Enterprise**
+
+
 
 # Java
  1. **`git clone https://github.com/UthmanPortSwigger/add-custom-headers.git`**
@@ -20,19 +20,3 @@ Working code implementation of the Java version is based on: https://forum.ports
   - The build command in step 4 will then become: `./gradlew -Dorg.gradle.java.home=<path-to-your-enterprise-installation-directory>/jres/11.x/Contents/Home fatJar` or `gradle -Dorg.gradle.java.home=<path-to-your-enterprise-installation-directory>/jres/11.x/Contents/Home fatJar` 
   - In the points above, replace `<path-to-your-enterprise-installation-directory>` and `11.x` as appropriate
  
-**General Note:** If you see a `permission denied: ./gradlew` error, please run `chmod +x gradlew` before the build command
-# Python
- 1. **`git clone https://github.com/UthmanPortSwigger/add-custom-headers.git`**
- 2. **`cd add-custom-headers/Custom-Headers/Python`**
- 3. Edit **Add-Headers-Python.py**
- 4. Load into Burp Suite Professional under **`Extender > Extensions > Add`**. Please ensure that you have Jython installed  
-
-# Helpful resources: 
-
-- https://portswigger.net/blog/burp-extensions-added-to-burp-suite-enterprise-edition
-- https://portswigger.net/burp/documentation/desktop/tools/extender
-- https://portswigger.net/burp/extender
-- https://portswigger.net/burp/extender/writing-your-first-burp-suite-extension
-
-# Contributors: 
-:octopus:	[@Hannah-PortSwigger](https://github.com/Hannah-Portswigger) :octopus:
