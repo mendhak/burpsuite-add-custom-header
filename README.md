@@ -5,9 +5,22 @@ The intention is to use this extension and then filter out BurpSuite traffic in 
 Forked from [this extension](https://github.com/UthmanPortSwigger/add-custom-headers).  
 
 
+## Building
+
+    ./gradlew fatJar
+
+This creates an output at `build/libs/Add-XBurpSuite-Header.jar`
+
+## Installing
+
+(TBC not tested yet)
+
+Load the **Add-XBurpSuite-Header.jar** file created at **build/libs** into Burp Suite Professional under **`Extender > Extensions > Add`** or Burp Suite Enterprise under **`Cog/Settings icon > Extensions > Custom extensions > Upload extension`**
+    - https://portswigger.net/burp/documentation/enterprise/working/scans/extensions#writing-and-uploading-your-own-extensions
 
 
-# Editing instructions
+
+## Editing
 
  1. Clone this repo
  2. Edit **BurpExtender.java** using vim or a text editor of your choice. Change **urlMatchList** to match your scope, **headersToAdd** to match the headers you want to add, and set **checkForDuplicates** to true or false. 
