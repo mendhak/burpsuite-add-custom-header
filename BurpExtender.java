@@ -23,7 +23,7 @@ public class BurpExtender implements IBurpExtender, IHttpListener {
       BurpExtender.callbacks = callbacks;
       stdout = new PrintWriter(callbacks.getStdout(), true);
       helpers = callbacks.getHelpers();
-      callbacks.setExtensionName("Add-Headers-Java");
+      callbacks.setExtensionName("Add-XBurpSuite-Header");
       callbacks.registerHttpListener(this);
     }
 
