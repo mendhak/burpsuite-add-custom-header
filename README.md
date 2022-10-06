@@ -6,11 +6,10 @@ Forked from [this extension](https://github.com/UthmanPortSwigger/add-custom-hea
 
 
 # Java
- 1. **`git clone https://github.com/UthmanPortSwigger/add-custom-headers.git`**
- 2. **`cd add-custom-headers/Custom-Headers/Java`**
- 3. Edit **BurpExtender.java** using vim or a text editor of your choice. Change **urlMatchList** to match your scope, **headersToAdd** to match the headers you want to add, and set **checkForDuplicates** to true or false. In the example under Releases (v1.0), the scope is https://portswigger-labs.net and the headers added are "Header1: value1" and "Header2: Value2"
- 4. Run **`./gradlew fatJar`** 
- 5. Load the **Add-XBurpSuite-Header.jar** file created at **build/libs** into Burp Suite Professional under **`Extender > Extensions > Add`** or Burp Suite Enterprise under **`Cog/Settings icon > Extensions > Custom extensions > Upload extension`**
+ 1. Clone this repo
+ 2. Edit **BurpExtender.java** using vim or a text editor of your choice. Change **urlMatchList** to match your scope, **headersToAdd** to match the headers you want to add, and set **checkForDuplicates** to true or false. In the example under Releases (v1.0), the scope is https://portswigger-labs.net and the headers added are "Header1: value1" and "Header2: Value2"
+ 3. Run **`./gradlew fatJar`** 
+ 4. Load the **Add-XBurpSuite-Header.jar** file created at **build/libs** into Burp Suite Professional under **`Extender > Extensions > Add`** or Burp Suite Enterprise under **`Cog/Settings icon > Extensions > Custom extensions > Upload extension`**
     - https://portswigger.net/burp/documentation/enterprise/working/scans/extensions#writing-and-uploading-your-own-extensions
 
 **Note for Enterprise users:**
